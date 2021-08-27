@@ -35,7 +35,7 @@ RememberOpenedTabs=false
 ShowCopyMoveMenu=true
 ShowFullPath=true
 ShowFullPathInTitlebar=true
-Version=200
+Version=201
 ViewPropsTimestamp=2020,11,14,21,1,26
 
 [IconsMode]
@@ -43,23 +43,34 @@ FontFamily=Monospace
 FontSize=18
 FontWeight=50
 MaximumTextLines=2
-PreviewSize=32
+PreviewSize=16
 TextWidthIndex=3
 UseSystemFont=false
 
 [KPropertiesDialog]
+DP-0 Height 1920x1080=506
+DP-0 Width 1920x1080=466
 eDP Height 1080=510
 eDP Height 1920x1080=559
 eDP Width 1920=562
 eDP Width 1920x1080=609
 
 [MainWindow]
+DP-0 Height 1920x1080=522
+DP-0 Width 1920x1080=950
+DP-0 XPosition 1920x1080=964
+DP-0 YPosition 1920x1080=552
+DP-1 Height 1920x1080=522
+DP-1 Width 1920x1080=950
+DP-1 XPosition 1920x1080=0
+DP-1 YPosition 1920x1080=29
 HDMI-A-0 eDP Window-Maximized 1360x768=true
 HDMI-A-0 eDP Window-Maximized 1920x1080=true
 HDMI-A-0 eDP XPosition=0
 HDMI-A-0 eDP YPosition=37
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAwAAAAAAAABXAAAD6PwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAuAAAAigAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAuAAAD6AAAAF0BAAADAAAAAQAAALQAAAJp/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACYAAAJpAAAACgEAAAMAAAADAAAHdgAAANz8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAHdgAAAAoBAAADAAAHHgAAA+gAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADkAAAB6PwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAuAAAAigAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAiAAAB6AAAAEsBAAADAAAAAQAAALQAAAJp/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACYAAAJpAAAACgEAAAMAAAADAAAHdgAAANz8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAHdgAAAAoBAAADAAAC0QAAAegAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 eDP HDMI-A-0 Window-Maximized 1360x768=true
 eDP HDMI-A-0 XPosition=0
@@ -84,6 +95,9 @@ IconSize=32
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,marble_thumbnail_shp,exrthumbnail,directorythumbnail,fontthumbnail,marble_thumbnail_geojson,pothumbnail,marble_thumbnail_gpx,imagethumbnail,jpegthumbnail,marble_thumbnail_kmz,marble_thumbnail_kml,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,mobithumbnail,opendocumentthumbnail,marble_thumbnail_osm,palathumbcreator,gsthumbnail,designerthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[Search]
+Location=Everywhere
 
 [SettingsDialog]
 eDP Height 1080=525

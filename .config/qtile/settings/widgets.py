@@ -79,7 +79,7 @@ primary_widgets = [
     ),
     powerline('color3', 'color4'),
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-    widget.Net(**base(bg='color3'), interface='enp3s0'),
+    widget.Net(**base(bg='color3'), interface='enp6s0'),
     powerline('color7', 'color3'),
     icon(bg="color7", text=' ',fontsize=27),  # Icon: fas fa-memory
     widget.CPU(**base(bg='color7'),format="CPU {freq_current}GHz {load_percent}% "),
