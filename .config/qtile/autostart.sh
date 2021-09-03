@@ -7,4 +7,4 @@ volumeicon &
 nm-applet &
 # nitrogen --restore &
 feh --randomize --bg-fill -D 2 ~/wallpapers/* &
-sh ./mount.sh
+sh ./mount.sh &

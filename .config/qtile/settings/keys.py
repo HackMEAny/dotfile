@@ -57,7 +57,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "b", lazy.spawn("vieb")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("dolphin")),
+    ([mod], "e", lazy.spawn("pcmanfm -n")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
