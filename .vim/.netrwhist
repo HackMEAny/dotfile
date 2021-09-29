@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/hackme/.config/sxiv/exec'
 let g:netrw_dirhist_7='/home/hackme/.cfg'
 let g:netrw_dirhist_6='/home/hackme/Desktop/HTB_Writeups/Oopsie'
 let g:netrw_dirhist_5='/home/hackme/.config/alacritty'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_2='/home/hackme'
 let g:netrw_dirhist_1='/home/hackme/.cfg'
 let g:netrw_dirhist_0='/home/hackme'
 let g:netrw_dirhist_9='/home'
-let g:netrw_dirhist_8='/home/hackme'
