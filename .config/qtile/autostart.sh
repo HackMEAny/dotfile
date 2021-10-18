@@ -9,4 +9,5 @@ nm-applet &
 feh --randomize --bg-fill -D 2 ~/wallpapers/* &
 picom &
 copyq &
+noisetorch -i alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback &
 sh ./mount.sh &
