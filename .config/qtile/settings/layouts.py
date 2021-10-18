@@ -25,17 +25,17 @@ layouts = [
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
-    # layout.Zoomy(),
+    layout.Zoomy(),
 ]
 
 floating_layout = layout.Floating(
     float_rules=[
         *layout.Floating.default_float_rules,
         Match(wm_class='confirmreset'),
-        Match(wm_class='makebranch'),
-        Match(wm_class='maketag'),
+        Match(wm_class='makebranch'),   #gitk
+        Match(wm_class='maketag'),      #gitk
         Match(wm_class='ssh-askpass'),
-        Match(title='branchdialog'),
+        Match(title='branchdialog'),    #gitk
         Match(title='pinentry'),
     ],
     border_focus=colors["color4"][0]

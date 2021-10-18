@@ -9,6 +9,11 @@ mod = "mod4"
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
 
+    # ---------- Scratchpad & Dropdown ------------
+    (["control", "shift"], "F11", lazy.group["scratchpad"].dropdown_toggle('ter')),
+    (["control", "shift"], "F12", lazy.group["scratchpad"].dropdown_toggle('calc')),
+    (["control", "shift"], "F10", lazy.group["scratchpad"].dropdown_toggle('clip')),
+
     # Switch between windows in current stack pane
     ([mod], "j", lazy.layout.down()),
     ([mod], "k", lazy.layout.up()),
@@ -81,6 +86,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([], "XF86AudioMute", lazy.spawn(
         "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     )),
+    # Media player controls
+    ([], "XF86AudioPlay", lazy.spawn("/usr/bin/playerctl play-pause")),
+    # ([], "XF86AudioPause", lazy.spawn("/usr/bin/playerctl pause")),
+    ([], "XF86AudioNext", lazy.spawn("/usr/bin/playerctl next")),
+    ([], "XF86AudioPrev", lazy.spawn("/usr/bin/playerctl previous")),
 
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
