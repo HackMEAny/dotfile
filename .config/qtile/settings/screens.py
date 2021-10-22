@@ -6,7 +6,8 @@
 from libqtile.config import Screen
 from libqtile import bar
 from libqtile.log_utils import logger
-from settings.widgets import primary_widgets, secondary_widgets
+from settings.widgets import primary_widgets
+# from settings.widgets import primary_widgets, secondary_widgets
 import subprocess
 
 
@@ -32,6 +33,6 @@ if command.returncode != 0:
 else:
     connected_monitors = int(command.stdout.decode("UTF-8"))
 
-if connected_monitors > 1:
-    for _ in range(1, connected_monitors):
-        screens.append(Screen(top=status_bar(secondary_widgets)))
+# if connected_monitors > 1:
+#     for _ in range(1, connected_monitors):
+#         screens.append(Screen(top=status_bar(secondary_widgets)))

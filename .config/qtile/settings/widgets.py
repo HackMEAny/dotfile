@@ -3,7 +3,8 @@ from settings.theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
-def base(fg='text', bg='dark'): 
+
+def base(fg='text', bg='dark'):
     return {
         'foreground': colors[fg],
         'background': colors[bg]
@@ -26,13 +27,13 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
+        text="",  # Icon: nf-oct-triangle_left
         fontsize=37,
         padding=-2
     )
 
 
-def workspaces(): 
+def workspaces():
     return [
         separator(),
         widget.GroupBox(
@@ -66,7 +67,7 @@ primary_widgets = [
     *workspaces(),
     separator(),
     powerline('color4', 'dark'),
-    icon(bg="color4", text=' '), # Icon: nf-fa-download
+    icon(bg="color4", text=' '),  # Icon: nf-fa-download
     widget.CheckUpdates(
         distro='Arch',
         background=colors['color4'],
@@ -81,33 +82,44 @@ primary_widgets = [
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     widget.Net(**base(bg='color3'), interface='enp6s0'),
     powerline('color7', 'color3'),
-    icon(bg="color7", text=' ',fontsize=27),  # Icon: fas fa-memory
-    widget.CPU(**base(bg='color7'),format="CPU {freq_current}GHz {load_percent}% "),
+    icon(bg="color7", text=' ', fontsize=27),  # Icon: fas fa-memory
+    widget.CPU(**base(bg='color7'),
+               format="CPU {freq_current}GHz {load_percent}% "),
     powerline('color5', 'color7'),
-    icon(bg="color5", text=' ',fontsize=20),  # Icon: fas fa-memory
-    widget.Memory(**base(bg='color5'), measure_mem="G",format="{MemUsed:.1f}{mm} / {MemTotal:.0f}{mm} "),
+    icon(bg="color5", text=' ', fontsize=20),  # Icon: fas fa-memory
+    widget.Memory(**base(bg='color5'), measure_mem="G",
+                  format="{MemUsed:.1f}{mm} / {MemTotal:.0f}{mm} "),
     powerline('color2', 'color5'),
     widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
     widget.CurrentLayout(**base(bg='color2'), padding=5),
     powerline('color1', 'color2'),
-    icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
+    icon(bg="color1", fontsize=17, text=' '),  # Icon: nf-mdi-calendar_clock
     widget.Clock(**base(bg='color1'), format='%A %d/%m/%Y - %I:%M %p'),
-    powerline('dark', 'color1'),
+    powerline('color3', 'color1'),
+    icon(bg="color3", fontsize=17, text=' ',),
+    #  mouse_callback={lambda: qtile.cmd_spawn("alacritty - e alsamixer")
+    widget.Volume(**base(bg='color3')),
+    powerline('dark', 'color3'),
+    # powerline('color3', 'color1'),
+    # widget.Bluetooth(**base(bg='color3')),
+    # powerline('dark', 'color3'),
     widget.Systray(background=colors['dark'], padding=5),
 ]
 
-secondary_widgets = [
-    *workspaces(),
-    separator(),
-    powerline('color1', 'dark'),
-    # widget.Memory(**base(bg='color5'), measure_mem='G'),
-    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
-    powerline('color2', 'color1'),
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
-    widget.Volume(**base(bg='color3')),
-    powerline('dark', 'color2'),
-]
+
+# For Secondary Display
+# secondary_widgets = [
+# *workspaces(),
+# separator(),
+# powerline('color1', 'dark'),
+# widget.Memory(**base(bg='color5'), measure_mem='G'),
+# widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
+# widget.CurrentLayout(**base(bg='color1'), padding=5),
+# powerline('color2', 'color1'),
+# widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
+# widget.Volume(**base(bg='color3')),
+# powerline('dark', 'color2'),
+# ]
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font Bold',
