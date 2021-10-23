@@ -58,7 +58,7 @@ def workspaces():
             disable_drag=True
         ),
         separator(),
-        widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+        widget.WindowName(**base(fg='focus'), fontsize=13, padding=5),
         separator(),
     ]
 

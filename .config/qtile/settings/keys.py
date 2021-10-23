@@ -51,11 +51,18 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    # ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "m", lazy.spawn(
+        "/home/hackme/.config/rofi/colorful/launcher.sh")),
+    # ([mod], "m", lazy.spawn("rofi -show drun -config ~/.config/rofi/launcher.rasi")),
     # ([mod], "m", lazy.spawn("dmenu_run -p 'Run :'")),
 
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    # ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    (["mod1"], "Tab", lazy.spawn(
+        "/home/hackme/.config/rofi/text/launcher.sh")),
+    (["mod1"], "p", lazy.spawn(
+        "/home/hackme/.config/rofi/powermenu/powermenu.sh")),
 
     # Browser
     #([mod], "b", lazy.spawn("firefox")),

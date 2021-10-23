@@ -1,4 +1,4 @@
 from os import path
 
 qtile_path = path.join(path.expanduser('~'), ".config", "qtile")
-print(qtile_path)
+# print(qtile_path)

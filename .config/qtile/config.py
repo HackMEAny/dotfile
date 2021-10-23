@@ -23,7 +23,10 @@ import subprocess
 @hook.subscribe.startup_once
 def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
+    subprocess.call([path.join(qtile_path, 'mount.sh')])
 
+
+# autostart()
 
 main = None
 dgroups_key_binder = None
