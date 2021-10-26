@@ -3,6 +3,7 @@
 # systray battery icon
 # cbatticon -u 5 &
 # systray volume
+xset r rate 300 50 &
 volumeicon &
 nm-applet &
 # nitrogen --restore &

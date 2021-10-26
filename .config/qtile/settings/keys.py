@@ -4,6 +4,8 @@
 # Qtile keybindings
 from libqtile.config import Key
 from libqtile.command import lazy
+from settings.path import *
+from os import path
 
 mod = "mod4"
 keys = [Key(key[0], key[1], *key[2:]) for key in [
@@ -52,20 +54,18 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Menu
     # ([mod], "m", lazy.spawn("rofi -show drun")),
-    ([mod], "m", lazy.spawn(
-        "/home/hackme/.config/rofi/colorful/launcher.sh")),
+    # ([mod], "m", lazy.spawn("/home/hackme/.config/rofi/colorful/launcher.sh")),
+    ([mod], "m", lazy.spawn(path.join(rofi_path, 'colorful/launcher.sh'))),
     # ([mod], "m", lazy.spawn("rofi -show drun -config ~/.config/rofi/launcher.rasi")),
     # ([mod], "m", lazy.spawn("dmenu_run -p 'Run :'")),
 
     # Window Nav
     # ([mod, "shift"], "m", lazy.spawn("rofi -show")),
-    (["mod1"], "Tab", lazy.spawn(
-        "/home/hackme/.config/rofi/text/launcher.sh")),
-    (["mod1"], "p", lazy.spawn(
-        "/home/hackme/.config/rofi/powermenu/powermenu.sh")),
+    (["mod1"], "Tab", lazy.spawn(path.join(rofi_path, 'text/launcher.sh'))),
+    (["mod1"], "p", lazy.spawn(path.join(rofi_path, 'powermenu/powermenu.sh'))),
 
     # Browser
-    #([mod], "b", lazy.spawn("firefox")),
+    # ([mod], "b", lazy.spawn("firefox")),
     ([mod], "b", lazy.spawn("vieb")),
 
     # File Explorer
