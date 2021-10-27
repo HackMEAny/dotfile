@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/hackme/.config/zsh/plugins/zsh-aliases-lsd'
+let g:netrw_dirhist_6='/home/hackme/.config/zsh/plugins'
+let g:netrw_dirhist_5='/home/hackme/.config/zsh'
+let g:netrw_dirhist_4='/home/hackme/.config'
 let g:netrw_dirhist_3='/home/hackme/.config/lf'
 let g:netrw_dirhist_2='/home/hackme/.local/share/qtile'
 let g:netrw_dirhist_1='/home/hackme/.config/lf'
 let g:netrw_dirhist_0='/usr/bin'
 let g:netrw_dirhist_9='/etc/X11/xinit/xinitrc.d'
 let g:netrw_dirhist_8='/etc/X11/xinit'
-let g:netrw_dirhist_7='/etc/X11'
-let g:netrw_dirhist_6='/etc/X11/xorg.conf.d'
-let g:netrw_dirhist_5='/usr/share/X11/xorg.conf.d'
-let g:netrw_dirhist_4='/etc/X11/xinit/xinitrc.d'
