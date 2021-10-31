@@ -14,4 +14,4 @@ picom &
 copyq &
 # noisetorch -i alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback &
 noisetorch -i -s alsa_input.usb-0c76_USB_PnP_Audio_Device-00.mono-fallback -t 95 &
-sh ./mount.sh &
+# sh ./mount.sh &
