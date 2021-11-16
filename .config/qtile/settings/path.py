@@ -1,5 +1,4 @@
 from os import path
 
-qtile_path = path.join(path.expanduser('~'), ".config", "qtile")
-rofi_path = path.join(path.expanduser('~'), ".config", "rofi")
-print(rofi_path)
+qtile_path = path.join(path.expanduser("~"), ".config", "qtile")
+rofi_path = path.join(path.expanduser("~"), ".config", "rofi")

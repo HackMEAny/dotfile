@@ -12,7 +12,7 @@ import subprocess
 
 
 def status_bar(widgets):
-    return bar.Bar(widgets, 24, opacity=0.95, margin=0)
+    return bar.Bar(widgets, 29, opacity=1, margin=0)
 
 
 screens = [Screen(top=status_bar(primary_widgets))]
@@ -33,6 +33,6 @@ if command.returncode != 0:
 else:
     connected_monitors = int(command.stdout.decode("UTF-8"))
 
-# if connected_monitors > 1:
-#     for _ in range(1, connected_monitors):
-#         screens.append(Screen(top=status_bar(secondary_widgets)))
+if connected_monitors > 1:
+    for _ in range(1, connected_monitors):
+        screens.append(Screen(top=status_bar(secondary_widgets)))

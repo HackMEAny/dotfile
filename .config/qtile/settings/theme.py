@@ -1,6 +1,7 @@
-# HackME
-# hackme.any@protonmail.com
-# Theming for Qtile
+#
+# author HackMEAny
+# email hackme.any@protonmail.com
+# desc Generalizing the theme, so that it can be used by other modules & you can only change the json file
 
 from os import path
 import subprocess
@@ -20,7 +21,7 @@ def load_theme():
         with open(config, "w") as f:
             f.write(f'{{"theme": "{theme}"}}\n')
 
-    theme_file = path.join(qtile_path, "themes", f'{theme}.json')
+    theme_file = path.join(qtile_path, "themes", f"{theme}.json")
     if not path.isfile(theme_file):
         raise Exception(f'"{theme_file}" does not exist')
 

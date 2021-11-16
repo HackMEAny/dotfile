@@ -1,5 +1,10 @@
 # Basic Settings
-set previewer ~/scripts/lf/preview
+# set previewer ~/.config/lf/previewer.sh
+# set cleaner ~/.config/lf/clear_img.sh
+# set previewer ~/scripts/lf/preview
+set previewer pv
+set cleaner preview-image
+
 set preview true
 set hidden true
 set drawbox true
@@ -99,14 +104,9 @@ cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
   while [ "$files" ]; do
-    # extract the substring from start of string up to delimiter.
-    # this is the first "element" of the string.
     file=${files%%;*}
 
     trash-put "$(basename "$file")"
-    # if there's only one element left, set `files` to an empty string.
-    # this causes us to exit this `while` loop.
-    # else, we delete the first "element" of the string from files, and move onto the next.
     if [ "$files" = "$file" ]; then
       files=''
     else
@@ -134,7 +134,7 @@ map d
 map c
 map e
 map f
-
+map - /home/hackmeqtile/.config/lf/preview-image "$f"
 # File Openers
 map ee $$EDITOR "$f"
 map u $view "$f"

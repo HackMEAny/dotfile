@@ -41,7 +41,7 @@ setopt appendhistory
 source "$HOME/.config/zsh/zsh-functions"
 
 # Auto Completions
-autoload -Uz compinit
+autoload -Uz compinit 
 zstyle ':completion:*' menu select
 # zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
@@ -51,7 +51,7 @@ _comp_options+=(globdots)		# Include hidden files.
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
 	tmp="$(mktemp)"
-        lf -last-dir-path="$tmp" "$@"
+        lf-ueberzug -last-dir-path="$tmp" "$@"
         if [ -f "$tmp" ]; then
 		dir="$(cat "$tmp")"
 		rm -f "$tmp" >/dev/null
@@ -61,9 +61,11 @@ lfcd () {
 
 #Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "z-shell/fast-syntax-highlighting"
+zsh_add_plugin "z-shell/history-search-multi-word"
 zsh_add_plugin "hlissner/zsh-autopair"
-zsh_add_plugin "yuhonas/zsh-aliases-lsd"
+# zsh_add_plugin "yuhonas/zsh-aliases-lsd"
 zsh_add_plugin "romkatv/powerlevel10k"
 
 # KeyBind
@@ -71,11 +73,16 @@ bindkey -s '^o' 'lfcd\n'
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
+bindkey -- '^[[1;5D' backward-word
+bindkey -- '^[[1;5C' forward-word
+
 
 # Environment
 export EDITOR="vim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
+export PAGER="most"
+export PATH=$PATH:~/.local/bin
 
 #Exports
 export NVM_DIR="$HOME/.nvm"
@@ -99,6 +106,91 @@ unset __conda_setup
 
 # Alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias ls='lsd'
+alias l='lsd --almost-all --long'
+alias llm='lsd --timesort --long'
+alias lS='lsd --oneline --classic'
+alias lt='lsd --tree --depth=1'
+alias lf='lf-ueberzug'
+alias grep='grep --color=always'
 
 # Source
 source "$HOME/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme"
+
+export LF_ICONS="di=📁:\
+ fi=📃:\
+ tw=🤝:\
+ ow=📂:\
+ ln=⛓:\
+ or=❌:\
+ ex=🎯:\
+ *.txt=✍:\
+ *.mom=✍:\
+ *.me=✍:\
+ *.ms=✍:\
+ *.png=🖼:\
+ *.webp=🖼:\
+ *.ico=🖼:\
+ *.jpg=📸:\
+ *.jpe=📸:\
+ *.jpeg=📸:\
+ *.gif=🖼:\
+ *.svg=🗺:\
+ *.tif=🖼:\
+ *.tiff=🖼:\
+ *.xcf=🖌:\
+ *.html=🌎:\
+ *.xml=📰:\
+ *.gpg=🔒:\
+ *.css=🎨:\
+ *.pdf=📚:\
+ *.djvu=📚:\
+ *.epub=📚:\
+ *.csv=📓:\
+ *.xlsx=📓:\
+ *.tex=📜:\
+ *.md=📘:\
+ *.r=📊:\
+ *.R=📊:\
+ *.rmd=📊:\
+ *.Rmd=📊:\
+ *.m=📊:\
+ *.mp3=🎵:\
+ *.opus=🎵:\
+ *.ogg=🎵:\
+ *.m4a=🎵:\
+*.flac=🎼:\
+ *.wav=🎼:\
+ *.mkv=🎥:\
+*.mp4=🎥:\
+ *.webm=🎥:\
+ *.mpeg=🎥:\
+*.avi=🎥:\
+ *.mov=🎥:\
+ *.mpg=🎥:\
+ *.wmv=🎥:\
+ *.m4b=🎥:\
+ *.flv=🎥:\
+ *.zip=📦:\
+ *.rar=📦:\
+*.7z=📦:\
+ *.tar.gz=📦:\
+ *.z64=🎮:\
+*.v64=🎮:\
+ *.n64=🎮:\
+ *.gba=🎮:\
+ *.nes=🎮:\
+ *.gdi=🎮:\
+ *.1=ℹ:\
+ *.nfo=ℹ:\
+ *.info=ℹ:\
+ *.log=📙:\
+ *.iso=📀:\
+ *.img=📀:\
+ *.bib=🎓:\
+ *.ged=👪:\
+ *.part=💔:\
+ *.torrent=🔽:\
+ *.jar=♨:\
+ *.java=♨:\
+ "
