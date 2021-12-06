@@ -129,42 +129,42 @@ primary_widgets = [
         text_open=" ",
         fontsize=25,
     ),
-    powerline("color4", "color1"),
+    powerline("dark", "color1"),
     # Backlight Widget
-    widget.WidgetBox(
-        **base(bg="color4"),
-        widgets=[
-            widget.Backlight(
-                **base(bg="color4"),
-                backlight_name="amdgpu_bl1",  # Change to your backlight name from `/sys/class/backlight/backlight_name`
-            )
-        ],
-        text_closed=" ",
-        text_open=" ",
-        fontsize=20,
-    ),
-    # Comment this line if you want to uncomment the below widgets
-    powerline("dark", "color4"),
-    # Uncomment if you want to use the Volume widget
-    # powerline('color9', 'color4'),
-    # widget.WidgetBox(**base(bg='color9'), widgets=[widget.Volume(
-    #     **base(bg='color9'), padding=5)], text_closed='墳 ', text_open='墳 ', fontsize=20),
-    # powerline('color8', 'color9'),
-    # Uncomment if you want to use the Bluetooth widget
-    # widget.WidgetBox(**base(bg='color8'), widgets=[widget.Bluetooth(
-    #     **base(bg='color8'))], text_closed=' ', text_open=' ', fontsize=20),
-    # powerline('dark', 'color8'),
-    # Battery Widget
-    widget.Battery(
-        **base(fg="light"),
-        charge_char="",
-        discharge_char="",
-        full_char="",
-        empty_char="",
-        show_short_text=False,
-        format="{char} {percent:2.0%}",
-        notify_below=10,
-    ),
+    # widget.WidgetBox(
+    #     **base(bg="color4"),
+    #     widgets=[
+    #         widget.Backlight(
+    #             **base(bg="color4"),
+    #             backlight_name="amdgpu_bl1",  # Change to your backlight name from `/sys/class/backlight/backlight_name`
+    #         )
+    #     ],
+    #     text_closed=" ",
+    #     text_open=" ",
+    #     fontsize=20,
+    # ),
+    # # Comment this line if you want to uncomment the below widgets
+    # powerline("dark", "color4"),
+    # # Uncomment if you want to use the Volume widget
+    # # powerline('color9', 'color4'),
+    # # widget.WidgetBox(**base(bg='color9'), widgets=[widget.Volume(
+    # #     **base(bg='color9'), padding=5)], text_closed='墳 ', text_open='墳 ', fontsize=20),
+    # # powerline('color8', 'color9'),
+    # # Uncomment if you want to use the Bluetooth widget
+    # # widget.WidgetBox(**base(bg='color8'), widgets=[widget.Bluetooth(
+    # #     **base(bg='color8'))], text_closed=' ', text_open=' ', fontsize=20),
+    # # powerline('dark', 'color8'),
+    # # Battery Widget
+    # widget.Battery(
+    #     **base(fg="light"),
+    #     charge_char="",
+    #     discharge_char="",
+    #     full_char="",
+    #     empty_char="",
+    #     show_short_text=False,
+    #     format="{char} {percent:2.0%}",
+    #     notify_below=10,
+    # ),
     # System Tray Widget
     widget.Systray(background=colors["dark"], padding=5),
 ]

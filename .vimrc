@@ -43,3 +43,5 @@ set ruler
 "colourscheme industry"
 set autoindent
 set matchpairs+=<:>
+set nopaste
+set pastetoggle=<F3>

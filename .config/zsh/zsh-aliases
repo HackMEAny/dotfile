@@ -1,0 +1,16 @@
+#!/bin/sh
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias ls='lsd'
+alias l='lsd --almost-all --long'
+alias llm='lsd --timesort --long'
+alias lS='lsd --oneline --classic'
+alias lt='lsd --tree --depth=1'
+alias lf='lf-ueberzug'
+alias grep='grep --color=always'
+git() {
+	if [[ $@ == "l" ]]; then
+		command git log --graph --oneline --decorate
+	else
+		command git "$@"
+	fi
+}
