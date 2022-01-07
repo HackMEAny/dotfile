@@ -55,6 +55,7 @@ keys = [
         ([mod], "Return", lazy.spawn("alacritty")),
         # Redshift
         ([mod], "r", lazy.spawn("redshift -O 4500")),
+        ([mod], "r", lazy.spawn("redshift -O 5000")),
         ([mod, "shift"], "r", lazy.spawn("redshift -x")),
         # Screenshot
         ([mod], "s", lazy.spawn("scrot")),
