@@ -14,7 +14,7 @@ keys = [
         # ------------ Window Configs ------------
         # ---------- Scratchpad & Dropdown ------------
         (["control", "shift"], "F11", lazy.group["scratchpad"].dropdown_toggle("ter")),
-        (["control", "shift"], "F12", lazy.group["scratchpad"].dropdown_toggle("calc")),
+        #(["control", "shift"], "F12", lazy.group["scratchpad"].dropdown_toggle("calc")),
         (["control", "shift"], "F10", lazy.group["scratchpad"].dropdown_toggle("clip")),
         # Switch between windows in current stack pane
         ([mod], "j", lazy.layout.down()),
@@ -44,6 +44,7 @@ keys = [
         # ------------ App Configs ------------
         # Menu
         ([mod], "m", lazy.spawn(path.join(rofi_path, "colorful/launcher.sh"))),
+        ([mod], "c", lazy.spawn(path.join(rofi_path, "calculator/launcher.sh"))),
         # Window Nav
         (["mod1"], "Tab", lazy.spawn(path.join(rofi_path, "text/launcher.sh"))),
         (["mod1"], "p", lazy.spawn(path.join(rofi_path, "powermenu/powermenu.sh"))),

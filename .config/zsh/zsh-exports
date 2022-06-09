@@ -6,7 +6,11 @@ export TERMINAL="alacritty"
 export BROWSER="brave"
 export PAGER="most"
 export PATH=$PATH:~/.local/bin
-
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+export NVM_DIR=$XDG_DATA_HOME/nvm
 #Exports
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -25,4 +29,15 @@ else
     fi
 fi
 unset __conda_setup
+
 # <<< conda initialize <<<
+source /usr/share/nvm/init-nvm.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# <<< Android SDK <<<
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+# <<< repo added
+export PATH=$PATH:/home/hackme/Desktop/Android_test/bin
