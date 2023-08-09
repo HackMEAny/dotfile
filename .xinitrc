@@ -1,45 +1,10 @@
 #!/bin/sh
-
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
-
-# merge in defaults and keymaps
-
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-
-fi
-
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
-
-if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
-    xrdb -merge "$userresources"
-
-fi
-
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
-
-# start some nice programs
-
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
-
-#exec startplasma-x11
-exec qtile start
+# load $XDG_CONFIG_HOME/X11/xprofile file if it exists; otherwise, load ~/.xprofile
+[ -f "$HOME"/.config/X11/xprofile ] && source "$HOME"/.config/X11/xprofile || source ~/.xprofile
+[[ -f ~/.config/X11/xprofile/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+#exec qtile start
+while :; do
+	pkill dwm_bar; dwm_bar & dwm
+done
+#exec dwm
+#exec dbus-launch --exit-with-session dwm
