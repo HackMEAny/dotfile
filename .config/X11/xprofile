@@ -1,0 +1,17 @@
+#xrandr --setprovideroutputsource modesetting NVIDIA-0 &
+#xrandr --auto --mode 1920x1080 &
+#artix-pipewire-loader &
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+xset r rate 300 50 &
+volumeicon &
+#nm-applet &
+feh --randomize --bg-fill -D 2 ~/.config/Wallpapers/* &
+~/.local/bin/dwm_bar &
+dunst &
+redshift -O 3200K &
+picom &
+sxhkd &
+xrdb -merge ~/.config/X11/xresources &
