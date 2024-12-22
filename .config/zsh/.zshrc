@@ -1,5 +1,5 @@
 export ZDOTDIR=$HOME/.config/zsh
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+[ "$(tty)" = "/dev/tty1" ] && exec dbus-run-session Hyprland
 neofetch
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -62,8 +62,8 @@ lfcd () {
 #Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 #zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "z-shell/fast-syntax-highlighting"
-zsh_add_plugin "z-shell/history-search-multi-word"
+zsh_add_plugin "zdharma-continuum/fast-syntax-highlighting"
+zsh_add_plugin "zdharma-continuum/history-search-multi-word"
 zsh_add_plugin "hlissner/zsh-autopair"
 # zsh_add_plugin "yuhonas/zsh-aliases-lsd"
 zsh_add_plugin "romkatv/powerlevel10k"
